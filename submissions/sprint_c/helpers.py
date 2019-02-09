@@ -65,3 +65,11 @@ class Epithet:
         for i in range(number):
             result.append(self.create_epithet(path, *args, **kwargs))
         return result
+
+    @classmethod
+    def get_random(self, path, ceil=100, *args, **kwargs):
+        ''' return random num of epithets '''
+        result = []
+        for i in range(random.randint(0, ceil)):
+            result.append(self.create_epithet(path, *args, **kwargs))
+        return result

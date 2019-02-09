@@ -10,7 +10,7 @@ def configure_app():
     import dotenv
     from flask import Flask
 
-    PROJECT_ROOT = os.path.abspath('.')
+    PROJECT_ROOT = os.getcwd()
     # per project instructions
     dotenv.load_dotenv(os.path.join(PROJECT_ROOT, '.env'))
     # This is easier

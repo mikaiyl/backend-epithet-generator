@@ -46,3 +46,7 @@ class TestHelpers(TestCase):
     def test_epithets(self):
         """ Test Epithet class """
         self.assertEquals(len(Epithet.get_epithets('../../resources/data.json',20)), 20) # noqa
+
+    def test_random(self):
+        """ Test Epithet class """
+        self.assertTrue(len(Epithet.get_random('../../resources/data.json',ceil=20)) < 20) # noqa
